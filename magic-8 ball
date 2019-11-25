@@ -1,0 +1,48 @@
+#include<iostream>
+#include<cstdlib>
+#include<cmath>
+using std::endl;
+int main(){
+  std::cout<<"MAGIC 8-BALL: ";
+  srand(time(NULL));
+  int answer=rand()%10;
+  std::cout<<answer<<endl;
+    if (answer==0){
+    std::cout<<"It is certain."<<endl;
+    }
+    else if (answer==1){
+      std::cout<<"It is decidely so."<<endl;
+    }
+    else if (answer==2){
+      std::cout<<"without a dout."<<endl;
+    }
+    else if (answer==3){
+      std::cout<<"Yes-definitly"<<endl;
+    }
+    else if (answer==4){
+      std::cout<<"You may rely on it."<<endl;
+    }
+    else if (answer==5){
+      std::cout<<"As I see it, yes"<<endl;
+    }
+    else if (answer==6){
+      std::cout<<"Most likley."<<endl;
+    }
+    else if (answer==7){
+      std::cout<<"Outlook good."<<endl;
+    }
+    else if (answer==8){
+      std::cout<<"Don't count on it "<<endl;
+    }
+    else if (answer==9){
+      std::cout<<"My reply is no "<<endl;
+    }
+  else{
+    std::cout<<"Very doubtful"<<endl;
+  }
+    
+    return 0;
+  
+  
+  
+}
