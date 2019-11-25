@@ -1,0 +1,60 @@
+
+#include<iostream>
+using std::cout;
+using std::cin;
+using std::string;
+using std::endl;
+#include<cstdlib>
+#include<ctime>
+void print_array(int array[], int count){
+    for(int i=0; i<count; i++){
+        cout<<array[i]<<"\t";
+    }
+    cout<<endl;
+}
+void play_game(){
+    int guess;
+    int guesses[250];
+    int guess_count=0;
+    int random=rand() % 251;
+    cout<<"guess a number: \n";
+    cin>>guess;
+    while(true){
+        cin>>guess;
+        guesses[guess_count]=guess;
+        guess_count++;
+    if (guess==random){
+        cout<<"yes correct!"<<endl;
+        break;
+    }
+    else if(guess<random){
+        cout<<"too low\n";
+    }
+    else{
+        cout<<"too high\n";
+        
+    }
+  }
+    print_array(guesses, guess_count);
+        
+    }
+
+int main(){
+    srand(time(NULL));//generate a random number that changes with time f the pc
+    int choice;
+    do{
+     cout<<"0. quit\n  1. play a game\n";
+     cin>>choice;
+     switch(choice){
+        case 0:
+        cout<<"ok see you again\n"; return 0;
+        case 1:
+         play_game();
+         return 0;
+     }
+    }
+    while(choice!=0);
+    
+    
+    
+}
