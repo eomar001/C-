@@ -85,5 +85,5 @@ if (slytherin > max) {
 
 std::cout << house << "!\n";
   
-  
+  return 0;
 }
