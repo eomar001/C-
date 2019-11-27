@@ -1,0 +1,33 @@
+
+#include<iostream>
+#include<fstream>
+#include<vector>
+using std::endl;
+
+int main(){
+    std::string filename;
+       std::cin>>filename;
+    std::ofstream file1;
+    file1.open(filename.c_str());
+   
+    
+    if(file1.is_open()){
+        std::cout<<"sucess \n";
+        
+    }
+    
+    std::vector<std::string> names;
+    names.push_back("emma");
+    names.push_back("emma");
+    names.push_back("emma");
+    for(std::string name: names){
+        file1<<name<<endl;
+    }
+    
+    file1<<"first time to write to a file \n";
+    file1.close();
+    
+    return 0;
+    
+}
+
