@@ -5,7 +5,7 @@ using std::cin;
 using std::string;
 using std::endl;
 #include<cstdlib>
-#include<ctime>
+#include<ctime>.  //to generate a random number each time 
 void print_array(int array[], int count){
     for(int i=0; i<count; i++){
         cout<<array[i]<<"\t";
@@ -16,9 +16,9 @@ void play_game(){
     int guess;
     int guesses[250];
     int guess_count=0;
-    int random=rand() % 251;
+    int random=rand() % 251;  //generate a random number less than 250
     cout<<"guess a number: \n";
-    cin>>guess;
+    cin>>guess;   // accepts the number 
     while(true){
         cin>>guess;
         guesses[guess_count]=guess;
@@ -35,12 +35,12 @@ void play_game(){
         
     }
   }
-    print_array(guesses, guess_count);
+    print_array(guesses, guess_count); 
         
     }
 
 int main(){
-    srand(time(NULL));//generate a random number that changes with time f the pc
+    srand(time(NULL));//generate a random number that changes with time of the pc
     int choice;
     do{
      cout<<"0. quit\n  1. play a game\n";
